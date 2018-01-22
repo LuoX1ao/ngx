@@ -84,11 +84,11 @@
   font-size: 14px;
   color: #555;
   margin-right: 20px;
-  -webkit-transition: width .3s;
-  -moz-transition: width .3s;
-  -ms-transition: width .3s;
-  -o-transition: width .3s;
-  transition: width .3s;
+  -webkit-transition: width .6s;
+  -moz-transition: width .6s;
+  -ms-transition: width .6s;
+  -o-transition: width .6s;
+  transition: width .6s;
 }
 
 .top-bar .search-item .global-search.focus {
