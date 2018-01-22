@@ -1,5 +1,4 @@
 import { ThemeModule } from './@theme/theme.module';
-import { PagesComponent } from './pages/pages.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule, ExtraOptions } from '@angular/router';
@@ -27,5 +26,6 @@ const config: ExtraOptions = {
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
 

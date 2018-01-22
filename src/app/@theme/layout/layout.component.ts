@@ -15,7 +15,6 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {
   }
 
-
   onItemClick(i: number, el: HTMLAnchorElement) {
     const item = this.menus[i];
     if (item.children && item.children.length > 0) {
@@ -37,6 +36,15 @@ export class LayoutComponent implements OnInit {
     this.resetMenuStatus();
     this.menus[parentIndex].selected = true;
     this.menus[parentIndex].children[elIndex].selected = true;
+  }
+
+  globalSearchToggle(event) {
+    event.target.classList.toggle('focus');
+  }
+
+  toggleMenu() {
+    document.getElementsByClassName('menu')[0].classList.toggle('visible');
+    document.getElementsByClassName('main-content')[0].classList.toggle('menu-visible');
   }
 
   private resetMenuStatus() {

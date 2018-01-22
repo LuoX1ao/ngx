@@ -32,7 +32,7 @@ export const MENUS: MenuItem[] = [{
         url: '/database/sqlserver'
     }]
 }, {
-    title: 'h5',
+    title: 'H5',
     url: 'h5',
     children: [{
         title: 'Angular',
