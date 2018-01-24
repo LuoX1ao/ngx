@@ -1,43 +1,67 @@
-<ul class="article-list">
-  <li class="article-list-item">
-    <h3 class="article-title"><a href="#">angular/angular</a></h3>
-    <div class="article-desc">One framework. Mobile & desktop.</div>
-    <div class="tags">
-      <span class="tag">angular</span>
-      <span class="tag">typescript</span>
-      <span class="tag">javascript</span>
-      <span class="tag">web-performance</span>
-    </div>
-    <div class="publication-info">
-      <div class="license">
-        MIT license
-      </div>
-      <div class="publication-time">
-        Updated 4 hours ago
-      </div>
-    </div>
-
-  </li>
-  <li class="article-list-item">
-    <h3 class="article-title"><a href="#">angular/angular</a></h3>
-    <div class="article-desc">One framework. Mobile & desktop.</div>
-    <div class="tags">
-      <span class="tag">angular</span>
-      <span class="tag">typescript</span>
-      <span class="tag">javascript</span>
-      <span class="tag">web-performance</span>
-    </div>
-    <div class="publication-time"></div>
-  </li>
-  <li class="article-list-item">
-    <h3 class="article-title"><a href="#">angular/angular</a></h3>
-    <div class="article-desc">One framework. Mobile & desktop.</div>
-    <div class="tags">
-      <span class="tag">angular</span>
-      <span class="tag">typescript</span>
-      <span class="tag">javascript</span>
-      <span class="tag">web-performance</span>
-    </div>
-    <div class="publication-time"></div>
-  </li>
-</ul>
+<app-article-list [articles]="articles"></app-article-list>
+<!--<ul class="article-list">-->
+  <!--<li class="article-list-item2" *ngFor="let article of articles;">-->
+    <!--<div class="tags">-->
+      <!--<div class="tag" *ngFor="let tag of article.tags">{{tag}}</div>-->
+    <!--</div>-->
+    <!--<h3 class="article-title">-->
+      <!--<a routerLink="{{article.url}}">{{article.title}}</a>-->
+    <!--</h3>-->
+    <!--<div class="desc">{{article.digest}}-->
+      <!--<a routerLink="{{article.url}}" class="read-more">Read more...</a>-->
+    <!--</div>-->
+    <!--<div class="publication-time">{{article.time}}</div>-->
+  <!--</li>-->
+  <!--<li class="article-list-item2">-->
+    <!--<div class="tags">-->
+      <!--<div class="tag">Javascript</div>-->
+      <!--<div class="tag">RxJS</div>-->
+    <!--</div>-->
+    <!--<h3 class="article-title">-->
+      <!--<a routerLink="/h5/angular/detail">The Reactive Extensions for JavaScript (RxJS) 4.0...</a>-->
+    <!--</h3>-->
+    <!--<div class="desc">...is a set of libraries to compose asynchronous and event-based programs using observable collections and Array#extras style composition in JavaScript-->
+      <!--<a routerLink="/h5/angular/detail" class="read-more">Read more...</a>-->
+    <!--</div>-->
+    <!--<div class="publication-time">2018-01-24</div>-->
+  <!--</li>-->
+  <!--<li class="article-list-item2">-->
+    <!--<div class="tags">-->
+      <!--<div class="tag">后台</div>-->
+      <!--<div class="tag">Spring</div>-->
+    <!--</div>-->
+    <!--<h3 class="article-title">-->
+      <!--<a routerLink="/">Spring IoC 概述及基本使用</a>-->
+    <!--</h3>-->
+    <!--<div class="desc">这是一段描述这是一段描述这是一段描述-->
+      <!--<a class="read-more">Read more...</a>-->
+    <!--</div>-->
+    <!--<div class="publication-time">2018-01-23</div>-->
+  <!--</li>-->
+  <!--<li class="article-list-item2">-->
+    <!--<div class="tags">-->
+      <!--<div class="tag">后台</div>-->
+      <!--<div class="tag">Spring</div>-->
+    <!--</div>-->
+    <!--<h3 class="article-title">-->
+      <!--<a routerLink="/">Spring IoC 概述及基本使用</a>-->
+    <!--</h3>-->
+    <!--<div class="desc">这是一段描述这是一段描述这是一段描述-->
+      <!--<a class="read-more">Read more...</a>-->
+    <!--</div>-->
+    <!--<div class="publication-time">2018-01-23</div>-->
+  <!--</li>-->
+  <!--<li class="article-list-item2">-->
+    <!--<div class="tags">-->
+      <!--<div class="tag">后台</div>-->
+      <!--<div class="tag">Spring</div>-->
+    <!--</div>-->
+    <!--<h3 class="article-title">-->
+      <!--<a routerLink="/h5/angular/detail">Spring IoC 概述及基本使用</a>-->
+    <!--</h3>-->
+    <!--<div class="desc">这是一段描述这是一段描述这是一段描述-->
+      <!--<a class="read-more">Read more...</a>-->
+    <!--</div>-->
+    <!--<div class="publication-time">2018-01-23</div>-->
+  <!--</li>-->
+<!--</ul>-->

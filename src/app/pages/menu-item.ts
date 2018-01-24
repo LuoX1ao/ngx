@@ -6,4 +6,5 @@ export interface MenuItem {
     expanded?: boolean;
     icon?: string;
     home?: boolean;
+    isTopMenu?: boolean;
 }

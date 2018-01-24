@@ -9,17 +9,15 @@ const routes: Route[] = [{
         path: 'home', loadChildren: 'app/pages/home/home.module#HomeModule'
     }, {
         path: 'h5', loadChildren: 'app/pages/h5/h5.module#H5Module'
-    },
-    //  {
-    //     path: 'back-end', loadChildren: 'app/pages/back-end/back-end.module#BackEndModule'
-    // }, {
-    //     path: 'database', loadChildren: 'app/pages/database/database.module#DatabaseModule'
-    // }, {
-    //     path: 'ios', loadChildren: 'app/pages/ios/ios.module#IOSModule'
-    // }, {
-    //     path: 'android', loadChildren: 'app/pages/android/android.module#AndroidModule'
-    // }, 
-    {
+    }, {
+        path: 'back-end', loadChildren: 'app/pages/back-end/back-end.module#BackEndModule'
+    }, {
+        path: 'database', loadChildren: 'app/pages/database/database.module#DatabaseModule'
+    }, {
+        path: 'ios', loadChildren: 'app/pages/ios/ios.module#IosModule'
+    }, {
+        path: 'android', loadChildren: 'app/pages/android/android.module#AndroidModule'
+    }, {
         path: '', redirectTo: 'home'
     }]
 }];

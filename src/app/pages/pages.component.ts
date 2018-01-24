@@ -1,5 +1,5 @@
 import { MenuItem } from './menu-item';
-import { MENUS } from './menu-config';
+import {MENUS, TOPMENUS} from './menu-config';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pages.component.css']
 })
 export class PagesComponent implements OnInit {
+
+  topMenus: MenuItem[] = TOPMENUS;
 
   menus: MenuItem[] = MENUS;
 

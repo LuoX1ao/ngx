@@ -17,7 +17,7 @@ const routes: Route[] = [{
     }, {
         path: 'css', component: CssComponent
     }, {
-        path: '', loadChildren: 'app/pages/h5/angular/angular.module#AngularModule'
+        path: 'angular', loadChildren: 'app/pages/h5/angular/angular.module#AngularModule'
     }]
 }];
 

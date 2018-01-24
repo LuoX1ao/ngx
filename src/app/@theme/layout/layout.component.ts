@@ -4,15 +4,31 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.css']
+  styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
 
   @Input('menus') menus: MenuItem[];
 
-  constructor() { }
+  @Input('topMenus') topMenus: MenuItem[];
+
+  private mdMin = 992;
+
+  constructor() {
+
+  }
 
   ngOnInit() {
+    const w = document.documentElement.clientWidth || document.body.clientWidth;
+    if (w >= this.mdMin) {
+      this.toggleMenu();
+    }
+  }
+
+  onLayoutClick(target: Element) {
+    if (target.classList.contains('shadow')) {
+      this.hideMenu();
+    }
   }
 
   onItemClick(i: number, el: HTMLAnchorElement) {
@@ -28,7 +44,7 @@ export class LayoutComponent implements OnInit {
       item.expanded = !item.expanded;
     } else {
       this.resetMenuStatus();
-      item.selected = !item.selected;
+      item.selected = true;
     }
   }
 
@@ -38,6 +54,16 @@ export class LayoutComponent implements OnInit {
     this.menus[parentIndex].children[elIndex].selected = true;
   }
 
+  onTopMenuItemClick(elIndex: number) {
+    this.resetMenuStatus();
+    for (let i = 0; i < this.topMenus.length; i++) {
+      if (i === elIndex) {
+        this.topMenus[elIndex].selected = true;
+        break;
+      }
+    }
+  }
+
   globalSearchToggle(event) {
     event.target.classList.toggle('focus');
   }
@@ -45,6 +71,21 @@ export class LayoutComponent implements OnInit {
   toggleMenu() {
     document.getElementsByClassName('menu')[0].classList.toggle('visible');
     document.getElementsByClassName('main-content')[0].classList.toggle('menu-visible');
+    document.getElementsByClassName('shadow')[0].classList.toggle('visible');
+  }
+
+  hideMenu() {
+    document.getElementsByClassName('menu')[0].classList.remove('visible');
+    document.getElementsByClassName('main-content')[0].classList.remove('menu-visible');
+    document.getElementsByClassName('shadow')[0].classList.remove('visible');
+  }
+
+  menuToggleMouseDown() {
+    document.getElementsByClassName('menu-toggle-item')[0]['style'].background = 'rgba(0,0,0,0.1)';
+  }
+
+  menuToggleMouseUp() {
+    document.getElementsByClassName('menu-toggle-item')[0]['style'].background = 'transparent';
   }
 
   private resetMenuStatus() {
@@ -55,6 +96,10 @@ export class LayoutComponent implements OnInit {
           subMenuItem.selected = false;
         });
       }
+    });
+
+    this.topMenus.forEach(menuItem => {
+      menuItem.selected = false;
     });
   }
 
